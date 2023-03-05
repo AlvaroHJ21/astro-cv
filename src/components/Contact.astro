@@ -1,0 +1,41 @@
+---
+import {Icon} from 'astro-icon';
+---
+
+<div class="contact">
+    <a href="">
+        <Icon pack="mdi" name="email" />
+        <p>alvarohuaysara@gmail.com</p>
+    </a>
+    <a href="">
+        <Icon pack="ic" name="baseline-phone-android" />
+        <p>+51 926513695</p>
+    </a>
+    <a href="">
+        <Icon pack="mdi" name="location" />
+        <p>Lurigancho Chosica, Lima, Perú</p>
+    </a>
+</div>
+
+<style>
+    .contact{
+        max-width: 100rem;
+        margin: 0 auto;
+        display: flex;
+        padding: 1rem 0;
+        justify-content: center;
+        background-color: #0A2647;
+        gap: 2rem;
+    }
+
+    .contact a{
+        display: flex;
+        color: white;
+        gap: .4rem;
+    }
+
+    .contact a svg{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+</style>
