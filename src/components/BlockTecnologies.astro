@@ -1,0 +1,56 @@
+---
+import Block from "../layouts/Block.astro";
+
+const tecnologies = [
+    "Javascript",
+    "HTML",
+    "CSS",
+    "PHP",
+    "Typescript",
+    "Bootstrap",
+    "TailwindCSS",
+    "Figma",
+    "JSON",
+    "Firebase",
+    "React",
+    "NextJS",
+    "MaterialUI",
+    "Node",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "PostgreSQL",
+    "Sequilize",
+    "GitHub",
+    "Docker",
+    "Dart",
+    "Flutter",
+]
+---
+
+<Block title="TECNOLOGÍAS">
+    <div class="tecnologies">
+        {
+            tecnologies.map((tecnology) => {
+                return (
+                    <div  class="tag"><p>{tecnology}</p></div>
+                )
+            })
+        }
+    </div>
+</Block>
+
+<style>
+    .tecnologies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .tecnologies .tag {
+        background-color: #5c627a;
+        color: white;
+        padding: 0.4rem 2rem;
+        border-radius: 1rem;
+    }
+</style>

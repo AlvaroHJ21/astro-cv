@@ -1,0 +1,55 @@
+---
+import Block from "../layouts/Block.astro";
+
+const languages = [
+    {
+        name: "Español",
+        level: 5,
+    },
+    {
+        name: "Ingles",
+        level: 3,
+    },
+];
+---
+
+<Block title="IDIOMAS">
+    <div class="languages">
+        {
+            languages.map(language => (
+                <p>{language.name}</p>
+                <div class="indicator">
+                    {
+                        Array.from({ length: language.level }, (_, i) => (
+                            <div class="high"></div>
+                        ))
+                    }
+                    {
+                        Array.from({ length: 5 - language.level }, (_, i) => (
+                            <div class="low"></div>
+                        ))
+                    }
+                </div>
+            ))
+        }
+    </div>
+</Block>
+
+<style>
+    .languages .indicator {
+        padding: 1rem 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .languages .indicator div {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        border: 1px solid #404467;
+    }
+
+    .languages .indicator div.high {
+        background-color: #404467;
+    }
+</style>

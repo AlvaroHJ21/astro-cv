@@ -1,0 +1,35 @@
+---
+import Block from "../layouts/Block.astro";
+
+const formations = [
+    {
+        career: "Ingeniero de Sistemas",
+        institution: "Universidad Nacional Mayor de San Marcos",
+        date: "2018 - 2023",
+    },
+]
+
+---
+
+<Block title="FORMACIÓN">
+    {
+        formations.map((formation) => {
+            return (
+                <div class="formation">
+                    <h4 class="career">{formation.career}</h4>
+                    <h5 class="institution">{formation.institution}</h5>
+                    <p class="text-italic">Fecha: {formation.date}</p>
+                </div>
+            )
+        })
+    }
+</Block>
+
+<style>
+    .formation .career {
+        font-weight: 400;
+    }
+    .formation .institution {
+        font-size: 1.8rem;
+    }
+</style>

@@ -1,0 +1,60 @@
+---
+import Block from '../layouts/Block.astro';
+const experiences = [
+    {
+        position: 'Desarrollador Web',
+        company: 'Agile Tech Perú',
+        date: 'Sep 2022 - Actualidad',
+        functions: [
+            'Diseño y desarrollo de aplicaciones web y móviles utilizando tecnologías como React, Node, Express y Flutter.',
+            'Desarrollo de API RESTful y servicios web utilizando Node y Express.',
+            'Integración de bases de datos relacionales como PostgreSQL en aplicaciones web y móviles',
+            'Desarrollo de aplicaciones móviles multiplataforma utilizando Flutter.',
+            'Implementación de interfaces de usuario atractivas y accesibles utilizando React y herramientas de diseño de UI/UX.',
+            'Implementación de autenticación y autorización de usuarios utilizando técnicas como JWT y OAuth.',
+            'Configuración y administración de sistemas de control de versiones como Git para colaboración y gestión de código.',
+            'Desarrollo de pruebas unitarias y de integración para asegurar la calidad del software.'
+        ],
+        reference: 'Ig Erick Max Aguilar Pineda eaguilarp@agiletech.com.pe',
+    },
+];
+---
+
+<Block title="EXPERIENCIA LABORAL">
+    {
+        experiences.map((experience) => (
+            <div class="experience">
+                <h4 class="position">{experience.position}</h4>
+                <p class="company">
+                    Empresa:{' '}
+                    <a href="" target="_blank">
+                        {experience.company}
+                    </a>
+                </p>
+                <p class="text-italic">Fecha: {experience.date}</p>
+                <p class="text-italic">Funciones</p>
+                <ul class="functions">
+                    {experience.functions.map((func) => (
+                        <li>
+                            <p>{func}</p>
+                        </li>
+                    ))}
+                </ul>
+                <p>
+                    <span class="text-italic">Referencia:</span> {experience.reference}
+                </p>
+            </div>
+        ))
+    }
+</Block>
+
+<style>
+    .experience .position {
+        font-size: 2rem;
+    }
+
+    .experience .functions {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+</style>

@@ -2,141 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Contact from '../components/Contact.astro';
+import BlockExperience from '../components/BlockExperience.astro';
+import BlockFormation from '../components/BlockFormation.astro';
+import BlockTecnologies from '../components/BlockTecnologies.astro';
+import BlockLanguages from '../components/BlockLanguages.astro';
+import BlockAreas from '../components/BlockAreas.astro';
 ---
 
 <Layout title="Welcome to Astro.">
     <Header />
     <Contact />
+
     <main>
         <div class="col">
-            <div class="block">
-                <h3 class="title">EXPERIENCIA LABORAL</h3>
-                <div class="content">
-                    <div class="experience">
-                        <h4 class="position">Desarrollador Web</h4>
-                        <p class="company">
-                            Empresa: <a href="https://www.3dprint.com.ar/" target="_blank"
-                                >3D Print</a>
-                        </p>
-                        <p class="text-italic">Fecha: 2019 - Actualidad</p>
-                        <p class="text-italic">Funciones</p>
-                        <ul class="functions">
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones web con tecnologías como React,
-                                    NextJS, NodeJS, Express, MongoDB, MySQL, PHP, Laravel, etc.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones móviles con tecnologías como React
-                                    Native, Ionic, etc.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones de escritorio con tecnologías como
-                                    Electron, etc.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones de escritorio con tecnologías como
-                                    Electron, etc.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones de escritorio con tecnologías como
-                                    Electron, etc.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Desarrollo de aplicaciones de escritorio con tecnologías como
-                                    Electron, etc.
-                                </p>
-                            </li>
-                        </ul>
-                        <p>institución
-                            <span class="text-italic">Referencia:</span> Ig Jhon Doe +51 999999999
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <h3 class="title">FORMACIÓN</h3>
-				<div class="content">
-					<div class="formation">
-						<h4 class="career">Ingeniero de Sistemas</h4>
-						<h5 class="institution">Universidad Nacional Mayor de San Marcos</h5>
-						<p class="text-italic">Fecha: 2018 - 2023</p>
-					</div>
-				</div>
-            </div>
+            <BlockExperience/>
+			<BlockFormation/>
         </div>
         <div class="col">
-            <div class="block">
-				<h3 class="title">TECNOLOGÍAS</h3>
-				<div class="content">
-					<div class="tecnologies">
-						<div class="tag"><p>Javascript</p></div>
-						<div class="tag"><p>HTML</p></div>
-						<div class="tag"><p>CSS</p></div>
-						<div class="tag"><p>PHP</p></div>
-						<div class="tag"><p>Typescript</p></div>
-						<div class="tag"><p>Bootstrap</p></div>
-						<div class="tag"><p>TailwindCSS</p></div>
-						<div class="tag"><p>Figma</p></div>
-						<div class="tag"><p>JSON</p></div>
-						<div class="tag"><p>Firebase</p></div>
-						<div class="tag"><p>React</p></div>
-						<div class="tag"><p>NextJS</p></div>
-						<div class="tag"><p>MaterialUI</p></div>
-						<div class="tag"><p>Node</p></div>
-						<div class="tag"><p>Express</p></div>
-						<div class="tag"><p>MongoDB</p></div>
-						<div class="tag"><p>Mongoose</p></div>
-						<div class="tag"><p>PostgreSQL</p></div>
-						<div class="tag"><p>Sequilize</p></div>
-						<div class="tag"><p>GitHub</p></div>
-						<div class="tag"><p>Docker</p></div>
-						<div class="tag"><p>Dart</p></div>
-						<div class="tag"><p>Flutter</p></div>
-					</div>
-				</div>
-			</div>
-            <div class="block">
-				<h3 class="title">IDIOMAS</h3>
-				<div class="content">
-					<div class="languages">
-						<p>Español</p>
-						<div class="indicator">
-							<div class="high"></div>
-							<div class="high"></div>
-							<div class="high"></div>
-							<div class="high"></div>
-							<div class="high"></div>
-						</div>
-						<p>Ingles</p>
-						<div class="indicator">
-							<div class="high"></div>
-							<div class="high"></div>
-							<div class="low"></div>
-							<div class="low"></div>
-							<div class="low"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-            <div class="block">
-				<h3 class="title">ÁREAS DE EXPERIENCIA</h3>
-				<div class="content">
-					<div class="tag-area"><p>Desarrollo Web Frontend</p></div>
-					<div class="tag-area"><p>Desarrollo Web Backend</p></div>
-					<div class="tag-area"><p>Desarrollo Móvil</p></div>
-				</div>
-			</div>
+			<BlockTecnologies/>
+			<BlockLanguages/>
+			<BlockAreas/>
         </div>
     </main>
 </Layout>
@@ -146,89 +31,23 @@ import Contact from '../components/Contact.astro';
         max-width: 100rem;
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
         padding: 2rem 3.2rem;
-		gap: 4rem;
+        gap: 4rem;
     }
 
-	main .col:nth-child(1){
-		flex: 5;
-	}
-
-	main .col:nth-child(2){
-		flex: 3;
-	}
-
-	.text-italic {
-        color: #5b8fb9;
-        font-style: italic;
+    main .col:nth-child(1) {
+        flex: 5;
     }
 
-    .block .title {
-        color: #5b8fb9;
-        width: fit-content;
-		margin-bottom: 1.6rem;
+    main .col:nth-child(2) {
+        flex: 3;
     }
 
-    .block .title::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 0.3rem;
-        background-color: #5b8fb9;
+    @media screen and (min-width: 599px) {
+        main{
+            flex-direction: row;
+        }
     }
 
-	.block .content {
-		margin-bottom: 3.2rem;
-	}
-
-	.experience .position {
-		font-size: 2rem;
-	}
-
-    .experience .functions{
-		margin-left: 2rem;
-		margin-bottom: 1rem;
-    }
-
-	.formation .institution{
-		font-size: 1.8rem;
-	}
-
-	.tecnologies{
-		display: flex;
-		flex-wrap: wrap;
-		gap: .8rem;
-	}
-
-	.tecnologies .tag{
-		background-color: #3f4758;
-		color: white;
-		padding: .4rem 2rem;
-		border-radius: 1rem;
-	}
-
-	.languages .indicator{
-		padding: 1rem 0;
-		display: flex;
-		gap: 1rem;
-	}
-
-	.languages .indicator div{
-		width: 2.4rem;
-		height: 2.4rem;
-		border-radius: 50%;
-		border: 1px solid #0A2647;
-	}
-
-	.languages .indicator div.high{
-		background-color: #0A2647;
-	}
-
-	.tag-area{
-		border: 1px solid #cecece;
-		padding: .4rem 2rem;
-		border-radius: 1rem;
-		margin-bottom: 1rem;
-		width: fit-content;
-	}
 </style>

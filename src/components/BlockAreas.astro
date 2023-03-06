@@ -1,0 +1,32 @@
+---
+import Block from "../layouts/Block.astro";
+
+const areas = [
+    "Desarrollo Web Frontend",
+    "Desarrollo Web Backend",
+    "Desarrollo Móvil",
+]
+---
+
+<Block title="ÁREAS DE EXPERIENCIA">
+    {
+        areas.map((area) => {
+            return (
+                <div class="tag-area">
+                    <p>{area}</p>
+                </div>
+            )
+        })
+    }
+</Block>
+
+<style>
+    .tag-area {
+        border: 1px solid #cecece;
+        padding: 0.4rem 2rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        width: fit-content;
+        color: #404467
+    }
+</style>

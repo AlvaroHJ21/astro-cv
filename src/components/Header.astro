@@ -1,26 +1,45 @@
 <header class="header">
+    <div class="container">
         <div class="texts">
             <h1>Alvaro Huaysara Jauregui</h1>
             <h2>Desarrollador Web y Móvil</h2>
             <p>
-                Mi experiencia laboral me ha permitido desarrollar soluciones tecnológicas utilizando sistemas web y aplicando las últimas tendencias de diseño, enfocándome en la facilidad de uso, escalabilidad y rendimiento. Me considero un desarrollador de sistemas de alta calidad ya que siempre pongo al usuario en primer lugar, asegurándome de que el diseño sea claro y conciso, lo que les brinda confianza y seguridad al utilizarlo. Mi objetivo es seguir aprendiendo sobre diferentes tecnologías de desarrollo para innovar en mi trabajo actual. Creo que es importante estar actualizado con las últimas tendencias y tecnologías para mejorar la calidad de los sistemas que desarrollo. Estoy emocionado por seguir creciendo como desarrollador y hacer una  contribución significativa en el campo tecnológico.
+                Mi experiencia laboral me ha permitido desarrollar soluciones tecnológicas
+                utilizando sistemas web y aplicando las últimas tendencias de diseño, enfocándome en
+                la facilidad de uso, escalabilidad y rendimiento. Me considero un desarrollador de
+                sistemas de alta calidad ya que siempre pongo al usuario en primer lugar,
+                asegurándome de que el diseño sea claro y conciso, lo que les brinda confianza y
+                seguridad al utilizarlo. Mi objetivo es seguir aprendiendo sobre diferentes
+                tecnologías de desarrollo para innovar en mi trabajo actual. Creo que es importante
+                estar actualizado con las últimas tendencias y tecnologías para mejorar la calidad
+                de los sistemas que desarrollo. Estoy emocionado por seguir creciendo como
+                desarrollador y hacer una contribución significativa en el campo tecnológico.
             </p>
         </div>
         <div class="perfil">
-            <img src="/perfil.png" alt="perfil">
+            <img src="/perfil.png" alt="perfil" />
         </div>
+    </div>
 </header>
 
 <style>
     .header {
+        background-color: #5c627a;
+    }
+    .container {
         max-width: 100rem;
         margin: 0 auto;
-        background: #144272;
         color: white;
         padding: 2rem 3.2rem;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
+    }
+    @media screen and (min-width: 599px) {
+        .container{
+            flex-direction: row;
+        }
     }
     .texts {
         flex: 1;
@@ -32,14 +51,14 @@
     }
     .texts h2 {
         font-size: 1.5em;
-        font-weight: 300;
         margin: 0;
-        color: #CBE4DE;
+        color: #b2ccaf;
         margin-bottom: 1rem;
     }
     .texts p {
-        font-size: .8em;
+        font-size: 0.8em;
         margin: 0;
+        text-align: justify;
     }
     .perfil {
         width: 20rem;
@@ -47,9 +66,9 @@
         overflow: hidden;
         border-radius: 50%;
         background-color: white;
-        border: 1rem solid #CBE4DE;
+        border: .4rem solid #404467;
     }
-    .perfil img{
+    .perfil img {
         display: block;
         width: 95%;
         margin: 0 auto;

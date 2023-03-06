@@ -3,29 +3,44 @@ import {Icon} from 'astro-icon';
 ---
 
 <div class="contact">
-    <a href="">
-        <Icon pack="mdi" name="email" />
-        <p>alvarohuaysara@gmail.com</p>
-    </a>
-    <a href="">
-        <Icon pack="ic" name="baseline-phone-android" />
-        <p>+51 926513695</p>
-    </a>
-    <a href="">
-        <Icon pack="mdi" name="location" />
-        <p>Lurigancho Chosica, Lima, Perú</p>
-    </a>
+    <div class="container">
+        <a href="">
+            <Icon pack="mdi" name="email" />
+            <p>alvarohuaysara@gmail.com</p>
+        </a>
+        <a href="">
+            <Icon pack="ic" name="baseline-phone-android" />
+            <p>+51 926513695</p>
+        </a>
+        <a href="">
+            <Icon pack="mdi" name="location" />
+            <p>Lurigancho Chosica, Lima, Perú</p>
+        </a>        
+    </div>
+
 </div>
 
 <style>
     .contact{
+        background-color: #404467;
+    }
+
+    .container{
         max-width: 100rem;
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 1rem 0;
         justify-content: center;
-        background-color: #0A2647;
         gap: 2rem;
+    }
+    
+    @media screen and (min-width: 599px) {
+        .container{
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 
     .contact a{

@@ -1,0 +1,34 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="block">
+    <h3 class="title">{title}</h3>
+    <div class="content">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .block .title {
+        color: #404467;
+        width: fit-content;
+		margin-bottom: 1.6rem;
+    }
+
+    .block .title::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0.3rem;
+        background-color: #404467;
+    }
+
+	.block .content {
+		margin-bottom: 3.2rem;
+	}
+</style>
