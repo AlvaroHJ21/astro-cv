@@ -1,0 +1,66 @@
+---
+import Block from "../layouts/Block.astro";
+
+const courses = [
+    {
+        name: "React: De cero a experto ( Hooks y MERN )",
+        institution: "Udemy",
+        date: "Mar 2022 - Abr 2022",
+    },
+    {
+        name: "CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos",
+        institution: "Udemy",
+        date: "Mar 2022 - Abr 2022",
+    },
+    {
+        name: "Node: De cero a experto",
+        institution: "Udemy",
+        date: "Feb 2022 - Mar 2022",
+    },
+    {
+        name: "JavaScript Moderno: Guía para dominar el lenguaje",
+        institution: "Udemy",
+        date: "Ene 2022 - Feb 2022",
+    },
+]
+
+---
+
+<Block title="CURSOS">
+    <div class="courses">
+        {
+        courses.map((course) => {
+            return (
+                <div class="course">
+                    <h4 class="name">{course.name}</h4>
+                    <h5 class="institution">{course.institution}</h5>
+                    <p class="text-italic">Fecha: {course.date}</p>
+                </div>
+            )
+        })
+    }
+    </div>
+    
+</Block>
+
+<style>
+    .courses{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem
+    }
+
+    .course {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course .name {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    .course .institution {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+</style>
