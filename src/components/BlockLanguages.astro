@@ -1,13 +1,13 @@
 ---
-import Block from "../layouts/Block.astro";
+import Block from '../layouts/Block.astro';
 
 const languages = [
     {
-        name: "Español",
-        level: 5,
+        name: 'Español',
+        level: 6,
     },
     {
-        name: "Ingles",
+        name: 'Ingles',
         level: 2,
     },
 ];
@@ -16,19 +16,17 @@ const languages = [
 <Block title="IDIOMAS">
     <div class="languages">
         {
-            languages.map(language => (
-                <p>{language.name}</p>
-                <div class="indicator">
-                    {
-                        Array.from({ length: language.level }, (_, i) => (
-                            <div class="high"></div>
-                        ))
-                    }
-                    {
-                        Array.from({ length: 5 - language.level }, (_, i) => (
-                            <div class="low"></div>
-                        ))
-                    }
+            languages.map((language) => (
+                <div class="flex">
+                    <p class="name">{language.name}</p>
+                    <div class="indicator">
+                        {Array.from({ length: language.level }, (_, i) => (
+                            <div class="high" />
+                        ))}
+                        {Array.from({ length: 6 - language.level }, (_, i) => (
+                            <div class="low" />
+                        ))}
+                    </div>
                 </div>
             ))
         }
@@ -51,5 +49,17 @@ const languages = [
 
     .languages .indicator div.high {
         background-color: #404467;
+    }
+
+    .languages .name {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #404467;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 </style>

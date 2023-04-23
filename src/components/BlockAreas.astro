@@ -1,11 +1,11 @@
 ---
-import Block from "../layouts/Block.astro";
+import Block from '../layouts/Block.astro';
 
 const areas = [
-    "Desarrollo Web Frontend",
-    "Desarrollo Web Backend",
-    "Desarrollo Móvil",
-]
+    'Desarrollo front-end: HTML, CSS, JavaScript, React.',
+    'Desarrollo back-end: Node.js, PostgreSQL, RestAPI.',
+    'Desarrollo móvil multiplataforma: FLutter',
+];
 ---
 
 <Block title="ÁREAS DE EXPERIENCIA">
@@ -15,7 +15,7 @@ const areas = [
                 <div class="tag-area">
                     <p>{area}</p>
                 </div>
-            )
+            );
         })
     }
 </Block>
@@ -23,10 +23,10 @@ const areas = [
 <style>
     .tag-area {
         border: 1px solid #cecece;
-        padding: 0.4rem 2rem;
+        padding: .4rem 1rem;
         border-radius: 1rem;
         margin-bottom: 1rem;
         width: fit-content;
-        color: #404467
+        color: #404467;
     }
 </style>
