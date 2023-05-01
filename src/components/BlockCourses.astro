@@ -3,30 +3,46 @@ import Block from "../layouts/Block.astro";
 
 const courses = [
     {
-        name: "React: De cero a experto ( Hooks y MERN )",
+        name: 'Curso: "Next.js: El framework de React para producción"',
+        institution: "Udemy",
+        date: "Jun 2022 - Ago 2022",
+    },
+    {
+        name: 'Curso: "React PRO: Lleva tus bases al siguiente nivel"',
+        institution: "Udemy",
+        date: "Jun 2022 - Jul 2022",
+    },
+    {
+        name: 'Curso: "React: De cero a experto ( Hooks y MERN )"',
         institution: "Udemy",
         date: "Mar 2022 - Abr 2022",
     },
     {
-        name: "CSS La Guía Completa - Flexbox, CSS Grid, SASS",
+        name: 'Curso: "CSS La Guía Completa - Flexbox, CSS Grid, SASS"',
         institution: "Udemy",
         date: "Mar 2022 - Abr 2022",
     },
     {
-        name: "Node: De cero a experto",
+        name: 'Curso: "Node: De cero a experto"',
         institution: "Udemy",
         date: "Feb 2022 - Mar 2022",
     },
     {
-        name: "JavaScript Moderno: Guía para dominar el lenguaje",
+        name: 'Curso: "JavaScript Moderno: Guía para dominar el lenguaje"',
         institution: "Udemy",
         date: "Ene 2022 - Feb 2022",
+    },
+    
+    {
+        name: "Certificado: Scrum Fundamentals Certified",
+        institution: "SCRUMstudy - Accreditation Body for Scrum and Agile",
+        date: "Nov 2021",
     },
 ]
 
 ---
 
-<Block title="CURSOS">
+<Block title="CURSOS Y CERTIFICADOS">
     <div class="courses">
         {
         courses.map((course) => {
@@ -34,8 +50,8 @@ const courses = [
                 <div class="course">
                     <h4 class="name">{course.name}</h4>
                     <div class="details">
-                        <h5 class="institution">{course.institution}</h5>
                         <p class="text-italic">Fecha: {course.date}</p>
+                        <h5 class="institution">{course.institution}</h5>
                     </div>
                 </div>
             )
@@ -58,7 +74,7 @@ const courses = [
     }
     
     .course .name {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1.8rem;
     }
     .course .institution {

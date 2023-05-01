@@ -12,7 +12,6 @@ import BlockCourses from '../components/BlockCourses.astro';
 
 <Layout title="AlvaroHJ CV">
     <Header />
-    
     <Contact />
 
     <main>
@@ -23,8 +22,8 @@ import BlockCourses from '../components/BlockCourses.astro';
         </div>
         <div class="col">
             <BlockTecnologies />
-            <BlockLanguages />
             <BlockAreas />
+            <BlockLanguages />
         </div>
     </main>
 </Layout>
@@ -35,16 +34,16 @@ import BlockCourses from '../components/BlockCourses.astro';
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        padding: 2rem 3.2rem;
+        padding: 3.2rem 3.2rem;
         gap: 4rem;
     }
 
     main .col:nth-child(1) {
-        flex: 5;
+        flex: 6;
     }
 
     main .col:nth-child(2) {
-        flex: 3;
+        flex: 4;
     }
 
     @media screen and (min-width: 599px) {

@@ -1,67 +1,64 @@
 ---
-import {Icon} from 'astro-icon';
+import { Icon } from 'astro-icon';
 ---
 
 <div class="contact">
     <div class="container">
-            <a href="mailto:alvarohuaysara@gmail.com">
-                <Icon pack="mdi" name="email" />
-                <p>alvarohuaysara@gmail.com</p>
-            </a>
-            <a href="tel:+51926513695">
-                <Icon pack="ic" name="baseline-phone-android" />
-                <p>+51 926513695</p>
-            </a>   
-            <a href="https://www.linkedin.com/in/alvarohuaysara/" target="_blank">
-                <Icon pack="mdi" name="linkedin" />
-                <p>/alvarohuaysara</p>
-            </a>    
-            <a href="https://github.com/AlvaroHJ21" target="_blank">
-                <Icon pack="mdi" name="github" />
-                <p>/AlvaroHJ21</p>
-            </a>    
-            <a href="https://alvarohuaysara.tech" target="_blank">
-                <Icon pack="mdi" name="web" />
-                <p>/alvarohuaysara.tech</p>
-            </a>    
-
+        <a href="mailto:alvarohuaysara@gmail.com">
+            <Icon pack="mdi" name="email" />
+            <p>alvarohuaysara@gmail.com</p>
+        </a>
+        <a href="tel:+51926513695">
+            <Icon pack="ic" name="baseline-phone-android" />
+            <p>+51 926513695</p>
+        </a>
+        <a href="https://www.linkedin.com/in/alvarohuaysara/" target="_blank">
+            <Icon pack="mdi" name="linkedin" />
+            <p>/alvarohuaysara</p>
+        </a>
+        <a href="https://github.com/AlvaroHJ21" target="_blank">
+            <Icon pack="mdi" name="github" />
+            <p>/AlvaroHJ21</p>
+        </a>
+        <a href="https://alvarohuaysara.tech" target="_blank">
+            <Icon pack="mdi" name="web" />
+            <p>/alvarohuaysara.tech</p>
+        </a>
     </div>
-
 </div>
 
 <style>
-    .contact{
-        background-color: #404467;
+    .contact {
+        background-color: #5c627a;
+        color: #fff;
     }
 
-    .container{
+    .container {
         max-width: 100rem;
         margin: 0 auto;
         display: grid;
-        padding: 1rem 0;
+        padding: 1rem 3.2rem;
         justify-items: center;
         gap: 2rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
 
-    .container .row{
+    .container .row {
     }
-    
-    .container .row:nth-child(1){
+
+    .container .row:nth-child(1) {
         display: flex;
         gap: 2rem;
-
     }
 
-    .contact a{
+    .contact a {
         display: flex;
-        color: white;
-        gap: .4rem;
+        gap: 0.4rem;
     }
 
-    .contact a svg{
+    .contact a svg {
         width: 2.4rem;
         height: 2.4rem;
     }
