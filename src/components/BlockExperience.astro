@@ -1,59 +1,70 @@
 ---
 import Block from '../layouts/Block.astro';
 const experiences = [
-    {
-        position: 'Desarrollador Web Fullstack y móvil',
-        company: 'Agile Tech Perú',
-        date: 'Sep 2022 - May 2023',
-        functions: [
-            'Diseño y desarrollo de aplicaciones web utilizando tecnologías frontend como React, Material UI y Redux. Logrando mejorar la experiencia de usuario y la velocidad de respuesta de la aplicación.',
-            'Desarrollo de una API RESTful utilizando Node, Express y PostgreSQL. Logrando mejorar la velocidad de respuesta de la aplicación al implementar un sistema de caché.',
-            'Desarrollo de pruebas unitarias y de integración para asegurar la calidad del software.',
-            'Configuración y administración de sistemas de control de versiones Git para colaboración y gestión de código. Logrando la integración continua de los cambios en el código.',
-            'Desarrollo de aplicaciones móviles multiplataforma utilizando Flutter.',
-        ],
-        reference: 'A solicitud',
-    },
+  {
+    position: 'Desarrollador Web',
+    company: 'PMBH',
+    date: 'May 2023 - Actualidad',
+    functions: [
+      'Diseño y desarrollo de páginas web informativas usando tecnologías frontend modernas como Astro, React y TailwindCSS. Mejorando la velocidad de desarrollo e incrementando el SEO de la web resultante.',
+      'Apoyo técnico en el ciclo de desarrollo de los proyectos, desde el diseño inicial, wireframes, programación y el despliegue.',
+      'Desarrollo de sistema de facturación utilizando la API de SUNAT. Logrando el desarrollo de un servicio REST para la creación de los XML que contienen la información de facturas, boletas, guías y notas enviadas a Sunat. Uso de las siguientes tecnologías: PHP, Codeigniter, MySQL, JQuery y Bootstrap.',
+    ],
+    reference: 'A solicitud',
+  },
+  {
+    position: 'Desarrollador Web Fullstack y móvil',
+    company: 'Agile Tech Perú',
+    date: 'Sep 2022 - May 2023',
+    functions: [
+      'Diseño y desarrollo de aplicaciones web utilizando tecnologías frontend como React, Material UI y Redux. Logrando mejorar la experiencia de usuario y la velocidad de respuesta de la aplicación.',
+      'Desarrollo de una API RESTful utilizando Node, Express y PostgreSQL.',
+      'Configuración y administración de sistemas de control de versiones Git para colaboración y gestión de código. Logrando la integración continua de los cambios en el código.',
+      'Desarrollo de aplicaciones móviles multiplataforma utilizando Flutter.',
+    ],
+    reference: 'A solicitud',
+  },
 ];
 ---
 
 <Block title="EXPERIENCIA LABORAL">
-    {
-        experiences.map((experience) => (
-            <div class="experience">
-                <h4 class="position">{experience.position}</h4>
-                <p class="company">
-                    Empresa:{' '}
-                    <a href="" target="_blank">
-                        {experience.company}
-                    </a>
-                </p>
-                <p class="text-italic">Fecha: {experience.date}</p>
-                <p class="text-italic">Funciones y logros</p>
-                <ul class="functions">
-                    {experience.functions.map((func) => (
-                        <li>
-                            <p>{func}</p>
-                        </li>
-                    ))}
-                </ul>
-                <p>
-                    <span class="text-italic">Referencia:</span> {experience.reference}
-                </p>
-            </div>
-        ))
-    }
+  {
+    experiences.map((experience) => (
+      <div class="experience">
+        <h4 class="position">{experience.position}</h4>
+        <p class="company">
+          Empresa: <a href="#">{experience.company}</a>
+        </p>
+        <p class="text-italic">Fecha: {experience.date}</p>
+        <p class="text-italic">Funciones y logros</p>
+        <ul class="functions">
+          {experience.functions.map((func) => (
+            <li>
+              <p>{func}</p>
+            </li>
+          ))}
+        </ul>
+        <p>
+          <span class="text-italic">Referencia:</span> {experience.reference}
+        </p>
+      </div>
+    ))
+  }
 </Block>
 
 <style>
-    .experience .position {
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        font-weight: 600;
-    }
+  .experience {
+    margin-bottom: 2rem;
+  }
 
-    .experience .functions {
-        margin-left: 2rem;
-        margin-bottom: 1rem;
-    }
+  .experience .position {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .experience .functions {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
 </style>

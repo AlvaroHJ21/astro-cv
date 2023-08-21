@@ -2,128 +2,126 @@
 import Block from '../layouts/Block.astro';
 
 const tecnologies2 = [
-    {
-        category: 'Frontend',
-        tecnologies: [
-            'Javascript',
-            'HTML',
-            'CSS',
-            'SASS',
-            'Typescript',
-            'React',
-            'NextJS',
-            'Vue',
-            'Angular',
-            'TailwindCSS',
-            'Material UI',
-            'Bootstrap',
-            'Dart',
-            'Flutter',
-        ],
-    },
-    {
-        category: 'Backend',
-        tecnologies: [
-            'NodeJS',
-            'Express',
-            'MongoDB',
-            'Mongoose',
-            'PostgreSQL',
-            'MySQL',
-            'NestJS',
-            'Sequilize',
-            'PHP',
-            'Java',
-            'Laravel',
-            'JSON',
-            'Firebase',
-        ],
-    },
-    {
-        category: 'Herramientas/Otros',
-        tecnologies: ['Git/Github', 'Docker', 'Figma', 'UX/UI', 'Jira/Atlassian', 'Scrum/Agile'],
-    },
+  {
+    category: 'Frontend',
+    tecnologies: [
+      'HTML5',
+      'CSS3',
+      'Javascript',
+      'Typescript',
+      'SASS',
+      'React',
+      'NextJS',
+      'Vue',
+      'Angular',
+      'Tailwind',
+      'Material UI',
+      'JQuery',
+      'Bootstrap',
+    ],
+  },
+  {
+    category: 'Backend',
+    tecnologies: [
+      'NodeJS',
+      'ExpressJS',
+      'Codeigniter 4',
+      'MongoDB',
+      'Mongoose',
+      'PostgreSQL',
+      'MySQL',
+      'NestJS',
+      'PHP',
+      'Laravel 9',
+      'JSON',
+      'Firebase',
+    ],
+  },
+  {
+    category: 'Herramientas/Otros',
+    tecnologies: ['Git/Github', 'Docker', 'Figma', 'UX/UI', 'Jira', 'Scrum'],
+  },
 ];
 
 const tecnologies = [
-    'Javascript',
-    'HTML',
-    'CSS',
-    'PHP',
-    'Typescript',
-    'Bootstrap',
-    'TailwindCSS',
-    'Figma',
-    'JSON',
-    'Firebase',
-    'React',
-    'NextJS',
-    'MaterialUI',
-    'Node',
-    'Express',
-    'MongoDB',
-    'Mongoose',
-    'PostgreSQL',
-    'Sequilize',
-    'GitHub',
-    'Docker',
-    'Dart',
-    'Flutter',
+  'Javascript',
+  'HTML',
+  'CSS',
+  'PHP',
+  'Typescript',
+  'Bootstrap',
+  'TailwindCSS',
+  'Figma',
+  'JSON',
+  'Firebase',
+  'React',
+  'NextJS',
+  'MaterialUI',
+  'Node',
+  'Express',
+  'MongoDB',
+  'Mongoose',
+  'PostgreSQL',
+  'Sequilize',
+  'GitHub',
+  'Docker',
+  'Dart',
+  'Flutter',
 ];
 ---
 
 <Block title="TECNOLOGÍAS">
-    <div class="tecnologies">
-        {
-            tecnologies2.map((tecnology) => {
+  <div class="tecnologies">
+    {
+      tecnologies2.map((tecnology) => {
+        return (
+          <div class="category">
+            <h3 class="name">{tecnology.category}</h3>
+            <div class="tags">
+              {tecnology.tecnologies.map((tecnology) => {
                 return (
-                    <div class="category">
-                        <h3 class="name">{tecnology.category}</h3>
-                        <div class="tags">
-                            {tecnology.tecnologies.map((tecnology) => {
-                                return (
-                                    <div class="tag">
-                                        <p>{tecnology}</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+                  <div class="tag">
+                    <p>{tecnology}</p>
+                  </div>
                 );
-            })
-        }
-    </div>
+              })}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
 </Block>
 
 <style>
-    .tecnologies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+  .tecnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-    .category {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
+  .category {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 
-    .category .name {
-        font-size: 1.4rem;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
+  .category .name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
 
-    .tags .tag {
-        background-color: #5c627a;
-        color: white;
-        padding: 0.4rem 2rem;
-        border-radius: 1rem;
-    }
+  .tags .tag {
+    background-color: #5c627a;
+    color: white;
+    padding: 0.4rem 2rem;
+    border-radius: 1rem;
+  }
 </style>
