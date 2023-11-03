@@ -1,89 +1,91 @@
 ---
-import Block from "../layouts/Block.astro";
+import Block from '../layouts/Block.astro';
 
 const courses = [
-    {
-        name: 'Curso: "Next.js: El framework de React para producción"',
-        institution: "Udemy",
-        date: "Jun 2022 - Ago 2022",
-    },
-    {
-        name: 'Curso: "React PRO: Lleva tus bases al siguiente nivel"',
-        institution: "Udemy",
-        date: "Jun 2022 - Jul 2022",
-    },
-    {
-        name: 'Curso: "React: De cero a experto ( Hooks y MERN )"',
-        institution: "Udemy",
-        date: "Mar 2022 - Abr 2022",
-    },
-    {
-        name: 'Curso: "CSS La Guía Completa - Flexbox, CSS Grid, SASS"',
-        institution: "Udemy",
-        date: "Mar 2022 - Abr 2022",
-    },
-    {
-        name: 'Curso: "Node: De cero a experto"',
-        institution: "Udemy",
-        date: "Feb 2022 - Mar 2022",
-    },
-    {
-        name: 'Curso: "JavaScript Moderno: Guía para dominar el lenguaje"',
-        institution: "Udemy",
-        date: "Ene 2022 - Feb 2022",
-    },
-    
-    {
-        name: "Certificado: Scrum Fundamentals Certified",
-        institution: "SCRUMstudy - Accreditation Body for Scrum and Agile",
-        date: "Nov 2021",
-    },
-]
-
+  {
+    name: 'Curso: "100 Days of Code: The Complete Python Pro Bootcamp for 2023"',
+    institution: 'Udemy',
+    date: 'Sep 2023 - Nov 2023',
+  },
+  {
+    name: 'Curso: "Next.js: El framework de React para producción"',
+    institution: 'Udemy',
+    date: 'Jun 2022 - Ago 2022',
+  },
+  {
+    name: 'Curso: "React PRO: Lleva tus bases al siguiente nivel"',
+    institution: 'Udemy',
+    date: 'Jun 2022 - Jul 2022',
+  },
+  {
+    name: 'Curso: "React: De cero a experto ( Hooks y MERN )"',
+    institution: 'Udemy',
+    date: 'Mar 2022 - Abr 2022',
+  },
+  {
+    name: 'Curso: "CSS La Guía Completa - Flexbox, CSS Grid, SASS"',
+    institution: 'Udemy',
+    date: 'Mar 2022 - Abr 2022',
+  },
+  {
+    name: 'Curso: "Node: De cero a experto"',
+    institution: 'Udemy',
+    date: 'Feb 2022 - Mar 2022',
+  },
+  {
+    name: 'Curso: "JavaScript Moderno: Guía para dominar el lenguaje"',
+    institution: 'Udemy',
+    date: 'Ene 2022 - Feb 2022',
+  },
+  {
+    name: 'Certificado: Scrum Fundamentals Certified',
+    institution: 'SCRUMstudy - Accreditation Body for Scrum and Agile',
+    date: 'Nov 2021',
+  },
+];
 ---
 
 <Block title="CURSOS EXTRAS">
-    <div class="courses">
-        {
-        courses.map((course) => {
-            return (
-                <div class="course">
-                    <h4 class="name">{course.name}</h4>
-                    <div class="details">
-                        <p class="text-italic">Fecha: {course.date}</p>
-                        <h5 class="institution">{course.institution}</h5>
-                    </div>
-                </div>
-            )
-        })
+  <div class="courses">
+    {
+      courses.map((course) => {
+        return (
+          <div class="course">
+            <h4 class="name">{course.name}</h4>
+            <div class="details">
+              <p class="text-italic">Fecha: {course.date}</p>
+              <h5 class="institution">{course.institution}</h5>
+            </div>
+          </div>
+        );
+      })
     }
-    </div>
-    
+  </div>
 </Block>
 
 <style>
-    .courses{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .course {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .course .name {
-        font-weight: 400;
-        font-size: 1.8rem;
-    }
-    .course .institution {
-        font-size: 1.6rem;
-        font-weight: 400;
-    }
-    .details{
-        display:flex;
-        width: 100%;
-        gap: 1rem;
-    }
+  .courses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .course {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course .name {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  .course .institution {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .details {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
 </style>
